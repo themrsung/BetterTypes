@@ -114,7 +114,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     @Nonnull
     @Override
-    public BetterMap<K, V> entryFilter(@Nonnull Predicate<BetterMap.Entry<K, V>> filter) {
+    public BetterMap<K, V> filter(@Nonnull Predicate<BetterMap.Entry<K, V>> filter) {
         return new BetterHashMap<>(stream().filter(filter));
     }
 

@@ -101,7 +101,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * @return Filtered map
      */
     @Nonnull
-    BetterMap<K, V> entryFilter(@Nonnull Predicate<Entry<K, V>> filter);
+    BetterMap<K, V> filter(@Nonnull Predicate<Entry<K, V>> filter);
 
     /**
      * Gets a filtered map, filtered by key.
