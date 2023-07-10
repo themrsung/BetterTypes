@@ -24,11 +24,11 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * If the default value is used, an entry with the given default value will be automatically put.
      * </p>
      * <p>
-     *     It is guaranteed that this will not return null as long as the default value is not null,
-     *     and it is also guaranteed that changed to the return value of this method will be reflected in this map.
+     * It is guaranteed that this will not return null as long as the default value is not null,
+     * and it is also guaranteed that changed to the return value of this method will be reflected in this map.
      * </p>
      *
-     * @param key Key to query
+     * @param key          Key to query
      * @param defaultValue Default value to be put in key's place, then returned
      * @return Value of key if found, default value if not
      */
@@ -41,6 +41,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a set of all keys in this map.
+     *
      * @return {@link BetterSet}
      */
     @Nonnull
@@ -49,6 +50,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a set of entries in this map.
+     *
      * @return {@link Entry}
      */
     @Nonnull
@@ -57,6 +59,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a collection of values in this map.
+     *
      * @return {@link BetterCollection}
      */
     @Nonnull
@@ -69,6 +72,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a stream of {@link BetterMap#entrySet()}.
+     *
      * @return {@link Stream}
      */
     @Nonnull
@@ -76,6 +80,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a stream of {@link BetterMap#keySet()}.
+     *
      * @return {@link Stream}
      */
     @Nonnull
@@ -83,6 +88,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a stream of {@link BetterMap#values()}.
+     *
      * @return {@link Stream}
      */
     @Nonnull
@@ -90,6 +96,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a filtered map, filtered by entry.
+     *
      * @param filter Filter to apply on entries
      * @return Filtered map
      */
@@ -98,6 +105,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a filtered map, filtered by key.
+     *
      * @param filter Filter to apply on keys
      * @return Filtered map
      */
@@ -106,6 +114,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
 
     /**
      * Gets a filtered map, filtered by value.
+     *
      * @param filter Filter to apply on values
      * @return Filtered map
      */
@@ -117,8 +126,8 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * All entries with a value not an instance of given class will be removed.
      *
      * @param valueType Type of value to get
+     * @param <W>       Type of value
      * @return Filtered map
-     * @param <W> Type of value
      */
     @Nonnull
     <W extends V> BetterMap<K, W> valueFilter(@Nonnull Class<W> valueType);
@@ -128,8 +137,8 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * All entries with a key not an instance of given class will be removed.
      *
      * @param keyType Type of key to get
+     * @param <L>     Type of value
      * @return Filtered map
-     * @param <L> Type of value
      */
     @Nonnull
     <L extends K> BetterMap<K, V> keyFilter(@Nonnull Class<L> keyType);
@@ -139,9 +148,9 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * All entries not an instance of given entry will be removed.
      *
      * @param entryType Type of entry to get
+     * @param <L>       A subtype of {@link K}
+     * @param <W>       A subtype of {@link V}
      * @return Filtered map
-     * @param <L> A subtype of {@link K}
-     * @param <W> A subtype of {@link V}
      */
     @Nonnull
     <L extends K, W extends V> BetterMap<L, W> filter(@Nonnull Class<Entry<L, W>> entryType);
@@ -150,11 +159,11 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * Filters this map by class of entry and value.
      * All entries which to not match the signature will be removed.
      *
-     * @param keyClass Type of key to get
+     * @param keyClass   Type of key to get
      * @param valueClass Type of value to get
+     * @param <L>        A subtype of {@link K}
+     * @param <W>        A subtype of {@link V}
      * @return Filtered map
-     * @param <L> A subtype of {@link K}
-     * @param <W> A subtype of {@link V}
      */
     @Nonnull
     <L extends K, W extends V> BetterMap<L, W> filter(@Nonnull Class<L> keyClass, @Nonnull Class<W> valueClass);

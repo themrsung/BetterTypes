@@ -24,6 +24,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Creates a map from given entries.
+     *
      * @param entries Entries
      */
     @SafeVarargs
@@ -33,6 +34,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Creates a map from given collection of entries.
+     *
      * @param entries Collection of entries
      */
     public BetterHashMap(@Nonnull BetterCollection<Map.Entry<K, V>> entries) {
@@ -41,6 +43,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Creates a new {@link BetterMap} from a default Java map.
+     *
      * @param javaMap {@link Map}
      */
     public BetterHashMap(@Nonnull Map<K, V> javaMap) {
@@ -49,6 +52,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Creates a new map from a stream of entries.
+     *
      * @param stream {@link Stream}
      */
     public BetterHashMap(@Nonnull Stream<Map.Entry<K, V>> stream) {
@@ -57,6 +61,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Performs a shallow copy of given map.
+     *
      * @param other Map to copy
      */
     public BetterHashMap(@Nonnull BetterHashMap<K, V> other) {
@@ -154,6 +159,7 @@ public class BetterHashMap<K, V> extends HashMap<K, V> implements BetterMap<K, V
 
     /**
      * Default BetterImplementation of {@link Map.Entry}.
+     *
      * @param <K> Class of key
      * @param <V> Class of value
      */
