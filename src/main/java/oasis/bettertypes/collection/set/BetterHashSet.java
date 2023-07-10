@@ -1,4 +1,4 @@
-package oasis.vortex.collection.set;
+package oasis.bettertypes.collection.set;
 
 import javax.annotation.Nonnull;
 import java.util.Collection;

@@ -1,6 +1,6 @@
-package oasis.vortex.collection.set;
+package oasis.bettertypes.collection.set;
 
-import oasis.vortex.collection.BetterCollection;
+import oasis.bettertypes.collection.BetterCollection;
 
 import javax.annotation.Nonnull;
 import java.util.Set;

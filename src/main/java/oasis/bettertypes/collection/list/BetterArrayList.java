@@ -1,6 +1,6 @@
-package oasis.vortex.collection.list;
+package oasis.bettertypes.collection.list;
 
-import oasis.vortex.collection.set.BetterHashSet;
+import oasis.bettertypes.collection.set.BetterHashSet;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;

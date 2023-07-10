@@ -1,4 +1,4 @@
-package oasis.vortex.collection;
+package oasis.bettertypes.collection;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
