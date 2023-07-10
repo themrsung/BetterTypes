@@ -25,7 +25,7 @@ public interface BetterMap<K, V> extends Map<K, V> {
      * </p>
      * <p>
      * It is guaranteed that this will not return null as long as the default value is not null,
-     * and it is also guaranteed that changed to the return value of this method will be reflected in this map.
+     * and it is also guaranteed that changes to the return value of this method will be reflected in this map.
      * </p>
      *
      * @param key          Key to query
